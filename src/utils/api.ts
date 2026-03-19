@@ -1,4 +1,4 @@
-const API_URL = 'https://dopskarmanghat-backend-13.vercel.app';
+const API_URL = 'https://dopskarmanghat-backend-13.vercel.app/api';
 
 interface ApiResponse {
   success: boolean;
