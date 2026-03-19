@@ -1,4 +1,4 @@
-const API_URL = 'https://discoveri-oaks-public-school-s4p9.vercel.app/api';
+const API_URL = 'https://dopskarmanghat-backend-13.vercel.app';
 
 interface ApiResponse {
   success: boolean;
