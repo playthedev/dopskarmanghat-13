@@ -167,6 +167,46 @@ const Home = () => {
         </div>
       </section>
 
+       {/* Vision & Mission Section */}
+      <section className="py-20 bg-white relative z-10">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-2 gap-12">
+            {/* Vision Card */}
+            <div className="bg-[#f8faff] p-8 rounded-2xl border-l-8 border-[#1B2B65] shadow-sm">
+              <div className="flex items-center mb-6">
+               
+                <h2 className="text-3xl font-bold text-[#1B2B65]">Our Vision</h2>
+              </div>
+              <p className="text-gray-700 text-lg leading-relaxed italic">
+                "To nurture confident, compassionate, and future-ready individuals by creating a dynamic learning environment that inspires curiosity, creativity, and lifelong learning."
+              </p>
+            </div>
+
+            {/* Mission Card */}
+            <div className="bg-[#fffdf5] p-8 rounded-2xl border-l-8 border-[#F4B41A] shadow-sm">
+              <div className="flex items-center mb-6">
+                
+                <h2 className="text-3xl font-bold text-[#1B2B65]">Our Mission</h2>
+              </div>
+              <ul className="space-y-4">
+                {[
+                  "Provide a safe, inclusive, and stimulating environment for every child",
+                  "Encourage critical thinking, innovation, and problem-solving skills",
+                  "Foster strong values, leadership qualities, and social responsibility",
+                  "Partner with parents to support holistic growth and development",
+                  "Prepare students to excel in a rapidly changing global world"
+                ].map((item, index) => (
+                  <li key={index} className="flex items-start">
+                    <span className="text-[#F4B41A] mr-3 mt-1">●</span>
+                    <span className="text-gray-700 font-medium">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Academic Programs Section */}
       <section className="py-20 bg-white relative z-10">
         <div className="container mx-auto px-4">
