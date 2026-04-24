@@ -4,6 +4,7 @@ import Hero from '../../components/Hero';
 import { motion } from 'framer-motion';
 import { submitForm } from '../../utils/api';
 import { AdmissionForm } from '../../types/forms';
+import { Helmet } from "react-helmet-async";
 
 const Admissions = () => {
   const [formData, setFormData] = useState<AdmissionForm>({
@@ -44,7 +45,15 @@ const Admissions = () => {
   };
 
   return (
+    <>
+    <Helmet>
+  <title>Admissions Open 2026 | DOPS Karmanghat School</title>
+  <meta name="description" content="Apply now for CBSE admissions in Hyderabad. Limited seats available." />
+</Helmet>
     <div className="min-h-screen">
+      <h1 className="sr-only">
+    Admissions Open for CBSE School in Karmanghat Hyderabad
+  </h1>
       {/* Hero Section */}
       <Hero
         title="Admissions"
@@ -218,6 +227,7 @@ const Admissions = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

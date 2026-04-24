@@ -8,6 +8,7 @@ import {
   middleSection,
 } from '../../assets';
 import Hero from '../../components/Hero';
+import { Helmet } from "react-helmet-async";
 
 // Define a type for the section content
 type SectionContent = {
@@ -83,7 +84,19 @@ const Academics = () => {
   };
 
   return (
+    <>
+    <Helmet>
+  <title>Academics at DOPS Karmanghat School | CBSE Curriculum Hyderabad</title>
+  <meta 
+    name="description" 
+    content="Explore Early Years, Primary, and Middle School academic programs at DOPS Karmanghat School in Hyderabad." 
+  />
+</Helmet>
     <div className="min-h-screen">
+      {/* ✅ SEO H1 (hidden) */}
+  <h1 className="sr-only">
+    CBSE Academics at DOPS Karmanghat School Hyderabad
+  </h1>
       {/* Hero Section */}
       <Hero
         title="Academics"
@@ -163,6 +176,7 @@ const Academics = () => {
         </motion.div>
       </div>
     </div>
+    </>
   );
 };
 

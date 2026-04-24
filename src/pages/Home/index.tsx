@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import AdmissionPopup from '../../components/AdmissionPopup';
 import { Director, earlySection, HomeHero, middleSection, primarySection } from '../../assets';
+import { Helmet } from "react-helmet-async";
 
 const Home = () => {
   const [showPopup, setShowPopup] = useState(false);
@@ -17,7 +18,16 @@ const Home = () => {
   }, []);
 
   return (
+    <>
+   <Helmet>
+  <title>DOPS Karmanghat School | Best CBSE School in Hyderabad</title>
+  <meta name="description" content="Top CBSE school in Karmanghat Hyderabad with modern facilities and expert faculty." />
+</Helmet>
     <div className="relative">
+      {/* ✅ SEO H1 (hidden) */}
+  <h1 className="sr-only">
+    Best CBSE School in Karmanghat Hyderabad
+  </h1>
       {/* Admission Strip */}
       <div className="bg-[#1B2B65] text-white py-4">
         <div className="container mx-auto px-4">
@@ -326,6 +336,7 @@ const Home = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

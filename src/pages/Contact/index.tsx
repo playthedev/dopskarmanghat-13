@@ -4,6 +4,7 @@ import { contactHero } from '../../assets';
 import { motion } from 'framer-motion';
 import { submitForm } from '../../utils/api';
 import { ContactForm as ContactFormType } from '../../types/forms';
+import { Helmet } from "react-helmet-async";
 
 interface ContactFormData extends ContactFormType {}
 
@@ -49,7 +50,16 @@ const Contact: React.FC = () => {
   };
 
   return (
+    <>
+    <Helmet>
+  <title>About DOPS School | CBSE School in Karmanghat</title>
+  <meta name="description" content="Learn about DOPS School, our mission, vision, and experienced faculty." />
+</Helmet>
     <div>
+       {/* ✅ SEO H1 (hidden) */}
+  <h1 className="sr-only">
+    Contact DOPS Karmanghat School in Hyderabad
+  </h1>
       <Hero
         title="Contact Us"
         backgroundImage={contactHero}
@@ -254,6 +264,7 @@ const Contact: React.FC = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 
